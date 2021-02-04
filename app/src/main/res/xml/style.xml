@@ -1,0 +1,4 @@
+<style name="Widget.BottomNavigationView"
+    parent="Widget.Design.BottomNavigationView">
+    <item name="fontFamily">@font/gbold</item>
+</style>

@@ -21,13 +21,57 @@ class CulturekFragmentval(onItemClick: (Item) -> Unit) : Fragment() {
         super.onCreate(savedInstanceState)
         list = ArrayList()
 
-        list.apply { add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))
-            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))
-            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))
-            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))
-            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))
-            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))
-            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","HP pavilion Gaming 13","Siz bu ampyutrni olasngiz yutqazmaysiz"))}
+        list.apply {
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+            add(
+                Item(
+                    "https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096",
+                    "HP pavilion Gaming 13",
+                    "Siz bu ampyutrni olasngiz yutqazmaysiz"
+                )
+            )
+        }
 
     }
 
@@ -43,7 +87,7 @@ class CulturekFragmentval(onItemClick: (Item) -> Unit) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        val adapter = FragmentAdapter(list){
+        val adapter = FragmentAdapter(list) {
 
         }
         binding.recyclerView.adapter = adapter

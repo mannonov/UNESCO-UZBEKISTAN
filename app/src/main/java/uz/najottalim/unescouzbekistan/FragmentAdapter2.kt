@@ -6,13 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import uz.najottalim.unescouzbekistan.databinding.ItemViewBinding
 
-class FragmentAdapter2(_list:ArrayList<Item>, val onClickListener: (Item) -> Unit) : RecyclerView.Adapter<FragmentAdapter2.ViewHolder>() {
+class FragmentAdapter2(_list: ArrayList<Item>, val onClickListener: (Item) -> Unit) :
+    RecyclerView.Adapter<FragmentAdapter2.ViewHolder>() {
 
-    val list:ArrayList<Item>  = _list
+    val list: ArrayList<Item> = _list
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemViewBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding = ItemViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return ViewHolder(binding)
     }
@@ -33,6 +34,6 @@ class FragmentAdapter2(_list:ArrayList<Item>, val onClickListener: (Item) -> Uni
         return list.size
     }
 
-    class ViewHolder(val binding:ItemViewBinding):RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root)
 
 }

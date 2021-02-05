@@ -33,7 +33,7 @@ class FragmentAdapter(_list: ArrayList<Item>, val onClickListener: (Item) -> Uni
         return list.size
     }
 
-    class ViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root){
+    class ViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
 }

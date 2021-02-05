@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var culturekFragment : CulturekFragmentval
 
-    lateinit var newsFragment : FragmentNewsBinding
+    lateinit var newsFragment : NewsFragment
 
-    lateinit var scienceFragment : FragmentScienceBinding
+    lateinit var scienceFragment : ScienceFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        showFragment(culturekFragment,"Culture Fragment")
+        scienceFragment = ScienceFragment {
+
+        }
+
+        showFragment(scienceFragment,"Culture Fragment")
 
 
 

@@ -5,27 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import uz.najottalim.unescouzbekistan.databinding.FragmentScienceBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class ScienceFragment(onClickListener: (Item) -> Unit) : Fragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ScienceFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ScienceFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var binding : FragmentScienceBinding
+
+    lateinit var list : ArrayList<Item>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+        list = ArrayList()
+
+        list.apply {
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
+            add(Item("https://firebasestorage.googleapis.com/v0/b/forefather-a18bf.appspot.com/o/comp.jpg?alt=media&token=cb434786-1329-41f5-9c7b-7a0b5d39a096","Hello akalar bu yana men","Nima deb oylaysilar shu ketishda davom etsak qannay bolarkin?"))
         }
     }
 
@@ -33,27 +33,18 @@ class ScienceFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_science, container, false)
+       binding = FragmentScienceBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ScienceFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ScienceFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val adapter = FragmentAdapter(list){
+        }
+        binding.recyclerViewScience.adapter = adapter
+        binding.recyclerViewScience.layoutManager = LinearLayoutManager(context)
+
     }
-}
+
+            }
